@@ -1,15 +1,16 @@
 import random
 
 r = random.randint(1, 100)
-t = 1
+count = 0
 while True:
+    count += 1
     num = input('Please guess the number: ')
     num = int(num)
     if r == num:
-        print('You guess', t ,'times. Finally, right!')
+        print('Finally, right!')
         break
     elif num > r:
-        print('You guess', t ,'times. Too Big.')
+        print('Too Big.')
     else :
-        print('You guess', t ,'times. Too Small.')
-    t = t + 1
+        print('Too Small.')
+    print('You guess', count, 'times')
