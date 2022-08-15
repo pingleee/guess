@@ -1,10 +1,6 @@
 import random
 
-minn = input('Please enter the min: ')
-maxx = input('Please enter the max: ')
-minn = int(minn)
-maxx = int(maxx)
-r = random.randint(minn, maxx)
+r = random.randint(1, 100)
 t = 1
 while True:
     num = input('Please guess the number: ')
@@ -12,6 +8,8 @@ while True:
     if r == num:
         print('You guess', t ,'times. Finally, right!')
         break
-    else:
-        print('You guess', t ,'times. Wrong!')
+    elif num > r:
+        print('You guess', t ,'times. Too Big.')
+    else :
+        print('You guess', t ,'times. Too Small.')
     t = t + 1
