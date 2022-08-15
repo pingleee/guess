@@ -1,6 +1,10 @@
 import random
 
-r = random.randint(1, 100)
+minn = input('Please enter the min: ')
+maxx = input('Please enter the max: ')
+minn = int(minn)
+maxx = int(maxx)
+r = random.randint(minn, maxx)
 t = 1
 while True:
     num = input('Please guess the number: ')
